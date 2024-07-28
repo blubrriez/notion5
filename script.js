@@ -30,18 +30,18 @@ $(function () {
     buffInterval = null,
     tFlag = false,
     albums = [
-      "jelly",
-      "jelly",
-      "jelly",
-      "jelly",
-      "jelly"
+      "",
+      "",
+      "",
+      "",
+      ""
     ],
     trackNames = [
-      "jelly - supast4r",
-      "jelly - supast4r",
-      "jelly - supast4r",
-      "jelly - supast4r",
-      "jelly - supast4r"
+      "",
+      "",
+      "",
+      "",
+      ""
     ],
     albumArtworks = ["_1", "_2", "_3", "_4", "_5"],
     trackUrl = [
@@ -183,8 +183,8 @@ $(function () {
 
       seekBar.width(0);
       trackTime.removeClass("active");
-      tProgress.text("00:00");
-      tTime.text("00:00");
+      tProgress.text("");
+      tTime.text("");
 
       currAlbum = albums[currIndex];
       currTrackName = trackNames[currIndex];

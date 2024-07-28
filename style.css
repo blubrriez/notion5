@@ -24,69 +24,6 @@ body {
   z-index: 3;
 }
 
-#player-track {
-  position: absolute;
-  top: 0;
-  right: 15px;
-  left: 15px;
-  padding: 13px 22px 10px 184px;
-  background-color: #fff7f7;
-  border-radius: 15px 15px 0 0;
-  transition: 0.3s ease top;
-  z-index: 1;
-}
-
-#player-track.active {
-  top: -92px;
-}
-
-#album-name {
-  color: #54576f;
-  font-size: 17px;
-  font-weight: bold;
-}
-
-#track-name {
-  color: #acaebd;
-  font-size: 13px;
-  margin: 2px 0 13px 0;
-}
-
-#track-time {
-  height: 12px;
-  margin-bottom: 3px;
-  overflow: hidden;
-}
-
-#current-time {
-  float: left;
-}
-
-#track-length {
-  float: right;
-}
-
-#current-time,
-#track-length {
-  color: transparent;
-  font-size: 11px;
-  background-color: #54576f;
-  border-radius: 10px;
-  transition: 0.3s ease all;
-}
-
-#track-time.active #current-time,
-#track-time.active #track-length {
-  color: #54576f;
-  background-color: transparent;
-}
-
-#s-area,
-#seek-bar {
-  position: relative;
-  height: 4px;
-  border-radius: 4px;
-}
 
 #s-area {
   background-color: #ffe8ee;
@@ -118,17 +55,6 @@ body {
   background-color: #3b3d50;
 }
 
-#seek-bar {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  background-color: #fd6d94;
-  transition: 0.2s ease width;
-  z-index: 1;
-}
 
 #player-content {
   position: relative;
@@ -145,15 +71,9 @@ body {
   height: 115px;
   margin-left: 40px;
   transform: rotateZ(0);
-  transition: 0.3s ease all;
   box-shadow: 0 0 0 10px #fff;
   border-radius: 50%;
   overflow: hidden;
-}
-
-#album-art.active {
-  top: -60px;
-  box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
 }
 
 #album-art:before {
