@@ -133,23 +133,9 @@ $(function () {
     if (durSeconds < 10) durSeconds = "0" + durSeconds;
 
 
-
-
-    if (
-      isNaN(curMinutes) ||
-      isNaN(curSeconds) ||
-      isNaN(durMinutes) ||
-      isNaN(durSeconds)
-    )
-      trackTime.removeClass("active");
-    else trackTime.addClass("active");
-
-    seekBar.width(playProgress + "%");
-
     if (playProgress == 100) {
       i.attr("class", "fa fa-play");
       seekBar.width(0);
-      tProgress.text("");
       albumArt.removeClass("buffering").removeClass("active");
       clearInterval(buffInterval);
     }
@@ -179,8 +165,7 @@ $(function () {
 
       seekBar.width(0);
       trackTime.removeClass("active");
-      tProgress.text("");
-      tTime.text("");
+
 
       currAlbum = albums[currIndex];
       currTrackName = trackNames[currIndex];
@@ -231,8 +216,6 @@ $(function () {
     sArea.mouseout(hideHover);
 
     sArea.on("click", playFromClickedPos);
-
-    $(audio).on("timeupdate", updateCurrTime);
 
     playPreviousTrackButton.on("click", function () {
       selectTrack(-1);
