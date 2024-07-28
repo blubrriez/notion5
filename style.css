@@ -5,9 +5,10 @@
 body {
   font-family: Helvetica, Arial;
   margin: 0;
-  transform: scale(0.75);
+  transform: scale(0.9);
   width: 0%;
   overflow: hidden;
+  margin-top:40px
 
 }
 
