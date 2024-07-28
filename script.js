@@ -93,15 +93,14 @@ $(function () {
     if (ctMinutes < 10) ctMinutes = "0" + ctMinutes;
     if (ctSeconds < 10) ctSeconds = "0" + ctSeconds;
 
-    if (isNaN(ctMinutes) || isNaN(ctSeconds)) insTime.text("--:--");
-    else insTime.text(ctMinutes + ":" + ctSeconds);
+
 
     insTime.css({ left: seekT, "margin-left": "-21px" }).fadeIn(0);
   }
 
   function hideHover() {
     sHover.width(0);
-    insTime.text("00:00").css({ left: "0px", "margin-left": "0px" }).fadeOut(0);
+    insTime.text("").css({ left: "0px", "margin-left": "0px" }).fadeOut(0);
   }
 
   function playFromClickedPos() {
@@ -133,11 +132,8 @@ $(function () {
     if (durMinutes < 10) durMinutes = "0" + durMinutes;
     if (durSeconds < 10) durSeconds = "0" + durSeconds;
 
-    if (isNaN(curMinutes) || isNaN(curSeconds)) tProgress.text("00:00");
-    else tProgress.text(curMinutes + ":" + curSeconds);
 
-    if (isNaN(durMinutes) || isNaN(durSeconds)) tTime.text("00:00");
-    else tTime.text(durMinutes + ":" + durSeconds);
+
 
     if (
       isNaN(curMinutes) ||
@@ -153,7 +149,7 @@ $(function () {
     if (playProgress == 100) {
       i.attr("class", "fa fa-play");
       seekBar.width(0);
-      tProgress.text("00:00");
+      tProgress.text("");
       albumArt.removeClass("buffering").removeClass("active");
       clearInterval(buffInterval);
     }
